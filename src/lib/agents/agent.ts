@@ -6,7 +6,6 @@ export interface AgentRunParams {
   messages: any[];
   persona: string;
   paramLevel: number;
-  openaiApiKey: string;
   openrouterApiKey?: string;
 }
 

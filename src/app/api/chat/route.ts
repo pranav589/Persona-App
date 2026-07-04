@@ -31,7 +31,6 @@ export async function POST(req: NextRequest) {
       messages,
       persona,
       paramLevel,
-      openaiApiKey: apiKey,
       openrouterApiKey: process.env.OPENROUTER_API_KEY,
     });
 
