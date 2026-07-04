@@ -10,14 +10,13 @@ export async function POST(req: NextRequest) {
   try {
     const { messages, persona, paramLevel } = await req.json();
 
-    const apiKey = process.env.OPENAI_API_KEY;
+    const apiKey = process.env.OPENROUTER_API_KEY;
     if (!apiKey) {
       return new Response(
         encoder.encode(
           JSON.stringify({
             type: "error",
-            message:
-              "OpenAI API Key is missing. Please add OPENAI_API_KEY to your .env.local file in the project root.",
+            message: "LLM API Key is missing.",
           }) + "\n",
         ),
         {
